@@ -8,9 +8,6 @@
 import UIKit
 import Firebase
 import PKHUD
-enum OperationError : Error { //throw文で使えることができるErrorプロトコルに準拠
-    case notSelectedRow
-}
 
 
 class ViewController: UIViewController {
@@ -47,32 +44,27 @@ class ViewController: UIViewController {
         
         
     }
-    private func selectedRowTask() throws -> Task {
-        guard let index = tableView.indexPathForSelectedRow else {
-            
-            throw OperationError.notSelectedRow
-        }
+    private func selectedRowTask(at index: IndexPath) -> Task {
+    
         let task = tasks[index.row]
         
         return task
     
     }
     
-    
     @IBAction func updateButton(_ sender: Any) {
-
-              guard let newTask = taskTextField.text  else { return }
-        
-        upDateTasksData(task: try! selectedRowTask(), newTask: newTask)
+        guard let index = tableView.indexPathForSelectedRow,
+               let newTask = taskTextField.text  else { return }
+      
+        upDateTasksData(task: selectedRowTask(at: index), newTask: newTask)
         
     }
     
     @IBAction func deleteButton(_ sender: Any) {
         
         guard let index = tableView.indexPathForSelectedRow else { return }
-        let task = tasks[index.row]
         
-        deleteTasksData(task: task)
+        deleteTasksData(task: selectedRowTask(at: index))
         
         
     }
