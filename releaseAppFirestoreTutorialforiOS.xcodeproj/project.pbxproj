@@ -19,6 +19,7 @@
 		CFC185C726F31225004E2A5D /* releaseAppFirestoreTutorialforiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC185C626F31225004E2A5D /* releaseAppFirestoreTutorialforiOSTests.swift */; };
 		CFC185D226F31225004E2A5D /* releaseAppFirestoreTutorialforiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC185D126F31225004E2A5D /* releaseAppFirestoreTutorialforiOSUITests.swift */; };
 		CFC185E126F31B49004E2A5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFC185E026F31B49004E2A5D /* GoogleService-Info.plist */; };
+		CFEE540926F59E0C00A6D7B1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE540826F59E0C00A6D7B1 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		CFC185D126F31225004E2A5D /* releaseAppFirestoreTutorialforiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = releaseAppFirestoreTutorialforiOSUITests.swift; sourceTree = "<group>"; };
 		CFC185D326F31225004E2A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC185E026F31B49004E2A5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CFEE540826F59E0C00A6D7B1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		D278513304DFD5B624C45C32 /* Pods_releaseAppFirestoreTutorialforiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_releaseAppFirestoreTutorialforiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A6CD7AB1B47E83958359B7 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C622BA1FE46C5EBAA7448A /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		CFC185AE26F31223004E2A5D /* releaseAppFirestoreTutorialforiOS */ = {
 			isa = PBXGroup;
 			children = (
+				CFEE540726F59DF000A6D7B1 /* Model */,
 				CFC185AF26F31223004E2A5D /* AppDelegate.swift */,
 				CFC185B126F31223004E2A5D /* SceneDelegate.swift */,
 				CFC185B326F31223004E2A5D /* ViewController.swift */,
@@ -177,6 +180,14 @@
 				CFC185E026F31B49004E2A5D /* GoogleService-Info.plist */,
 			);
 			path = FireBase;
+			sourceTree = "<group>";
+		};
+		CFEE540726F59DF000A6D7B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFEE540826F59E0C00A6D7B1 /* Task.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFEE540926F59E0C00A6D7B1 /* Task.swift in Sources */,
 				CFC185B426F31223004E2A5D /* ViewController.swift in Sources */,
 				CFC185B026F31223004E2A5D /* AppDelegate.swift in Sources */,
 				CFC185B226F31223004E2A5D /* SceneDelegate.swift in Sources */,
