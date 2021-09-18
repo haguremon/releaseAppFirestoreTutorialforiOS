@@ -62,91 +62,118 @@ class ViewController: UIViewController {
     func createTasksDataAll() {
         //ここでorder(by: "task", descending: true)で作成順に作成する
         db.collection("tasks").order(by: "task", descending: true).getDocuments { [ weak self] querySnapshot, error in
+            
             if let error = error {
                 print(error)
                 return
             }
             
             self?.tasks = (querySnapshot?.documents.map({ queryDocumentSnapshot -> Task in
+                
                 let task = Task(document: queryDocumentSnapshot)
                 
                 return task
             }))!
             
             DispatchQueue.main.async {
-            
+                
                 self?.tableView.reloadData()
             }
-
+            
         }
         
-
+        
     }
+    
+    
+    
+    
+    
+    //値の保存
+    func newTaskData(task: String) {
         
+        let documentData = ["task": task, "createdAt": Timestamp(), "updatedAt": Timestamp()] as [String : Any]
         
-        
-        
-        
-        //値の保存
-        func newTaskData(task: String) {
+        db.collection("tasks").document().setData(documentData) { error in
             
-            let documentData = ["task": task, "createdAt": Timestamp(), "updatedAt": Timestamp()] as [String : Any]
-            
-            db.collection("tasks").document().setData(documentData) { error in
-                
-                if let error = error {
-                    print("error: \(error))")
-                    return
-                }
-                
-                
+            if let error = error {
+                print("error: \(error))")
+                return
             }
             
             
         }
         
-        //値を変更する
-        func upDateTasksData(task: Task, newTask: String) {
+        
+    }
     
-            
-        
+    //値を変更する
+    func upDateTasksData(task: Task, newTask: String) {
+        let updateReference = db.collection("tasks").document(task.uid!)
+        updateReference.getDocument { [weak self] document, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else {
+                document?.reference.updateData([
+                    "task": newTask,
+                    "updatedAt": Timestamp()
+                
+                ])
+                self?.createTasksDataAll()
+                
+            }
         }
-        
-        
-        //削除する機能
-        func deleteTasksData(task: Task) {
-            
-            
-            
-        }
-        
         
         
         
     }
-
-
-
-    //MARK: -extension ViewController
-  
     
-    extension ViewController: UITableViewDelegate, UITableViewDataSource {
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         
-            return tasks.count
-        }
-        
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
- 
-            
-            cell.textLabel?.text = tasks[indexPath.row].task
-            
-            return cell
-        }
-        
+    
+    //削除する機能
+    func deleteTasksData(task: Task) {
         
         
         
     }
+    
+    
+    
+    
+}
+
+
+
+//MARK: -extension ViewController
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return tasks.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        
+        cell.textLabel?.text = tasks[indexPath.row].task
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
+        guard let newTask = taskTextField.text else { return }
+        
+        upDateTasksData(task: task, newTask: newTask)
+        
+        
+        
+    }
+    
+    
+    
+    
+}

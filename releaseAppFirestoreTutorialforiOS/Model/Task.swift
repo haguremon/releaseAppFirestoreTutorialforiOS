@@ -11,7 +11,7 @@ import Firebase
 class Task {
     let task: String?
     let creadeAt: Timestamp?
-    let uid: String?
+    var uid: String?
     let updatedAt: Timestamp?
     init(document: QueryDocumentSnapshot) {
         self.uid = document.documentID
