@@ -8,6 +8,10 @@
 import UIKit
 import Firebase
 import PKHUD
+enum OperationError : Error { //throw文で使えることができるErrorプロトコルに準拠
+    case notSelectedRow
+}
+
 
 class ViewController: UIViewController {
     
@@ -43,25 +47,44 @@ class ViewController: UIViewController {
         
         
     }
+    private func selectedRowTask() throws -> Task {
+        guard let index = tableView.indexPathForSelectedRow else {
+            
+            throw OperationError.notSelectedRow
+        }
+        let task = tasks[index.row]
+        
+        return task
+    
+    }
+    
     
     @IBAction func updateButton(_ sender: Any) {
+
+              guard let newTask = taskTextField.text  else { return }
         
-        print(tasks)
+        upDateTasksData(task: try! selectedRowTask(), newTask: newTask)
         
     }
     
     @IBAction func deleteButton(_ sender: Any) {
         
+        guard let index = tableView.indexPathForSelectedRow else { return }
+        let task = tasks[index.row]
+        
+        deleteTasksData(task: task)
         
         
     }
+    
+    
     
     
     //MRAK: -FireBaseCRAD
     //全値の取得
     func createTasksDataAll() {
         //ここでorder(by: "task", descending: true)で作成順に作成する
-        db.collection("tasks").order(by: "task", descending: true).getDocuments { [ weak self] querySnapshot, error in
+        db.collection("tasks").order(by: "createdAt", descending: true).getDocuments { [ weak self] querySnapshot, error in
             
             if let error = error {
                 print(error)
@@ -118,21 +141,30 @@ class ViewController: UIViewController {
                 document?.reference.updateData([
                     "task": newTask,
                     "updatedAt": Timestamp()
-                
+                    
                 ])
-                self?.createTasksDataAll()
+                
                 
             }
+            self?.createTasksDataAll()
         }
         
         
         
     }
     
-    
     //削除する機能
     func deleteTasksData(task: Task) {
-        
+        db.collection("tasks").document(task.uid!).delete() { [weak self] error in
+            if let error = error {
+                print("Error removing document: \(error)")
+            } else {
+                print("Document successfully removed!")
+                
+                self?.createTasksDataAll()
+            
+            }
+        }
         
         
     }
@@ -162,18 +194,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let task = tasks[indexPath.row]
-        guard let newTask = taskTextField.text else { return }
-        
-        upDateTasksData(task: task, newTask: newTask)
-        
-        
-        
-    }
-    
-    
     
     
 }
