@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var taskTextField: UITextField!
     
-    var db = Firestore.firestore()
+    private var db = Firestore.firestore()
     
     private var tasks: [Task] = []
     

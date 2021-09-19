@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1531910F965EB926CD7858DA /* Pods_releaseAppFirestoreTutorialforiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D278513304DFD5B624C45C32 /* Pods_releaseAppFirestoreTutorialforiOSTests.framework */; };
-		1861FF821290E182A9C02C95 /* Pods_releaseAppFirestoreTutorialforiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490B9D655237FB102D169451 /* Pods_releaseAppFirestoreTutorialforiOS.framework */; };
-		6B6A9F90372546FEA5000F42 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A6CD7AB1B47E83958359B7 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework */; };
+		8AB19219280F2AD151C4A273 /* Pods_releaseAppFirestoreTutorialforiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9017C00EFE5690B01FDF936 /* Pods_releaseAppFirestoreTutorialforiOS.framework */; };
+		CD4ECD7E0C2CE77738700277 /* Pods_releaseAppFirestoreTutorialforiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E48D3A03F8E3DD8248E1C3 /* Pods_releaseAppFirestoreTutorialforiOSTests.framework */; };
 		CFC185B026F31223004E2A5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC185AF26F31223004E2A5D /* AppDelegate.swift */; };
 		CFC185B226F31223004E2A5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC185B126F31223004E2A5D /* SceneDelegate.swift */; };
 		CFC185B426F31223004E2A5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC185B326F31223004E2A5D /* ViewController.swift */; };
@@ -20,6 +19,9 @@
 		CFC185D226F31225004E2A5D /* releaseAppFirestoreTutorialforiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC185D126F31225004E2A5D /* releaseAppFirestoreTutorialforiOSUITests.swift */; };
 		CFC185E126F31B49004E2A5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFC185E026F31B49004E2A5D /* GoogleService-Info.plist */; };
 		CFEE540926F59E0C00A6D7B1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE540826F59E0C00A6D7B1 /* Task.swift */; };
+		CFF2E28126F705A50018C1B3 /* ImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2E28026F705A50018C1B3 /* ImageTableViewController.swift */; };
+		CFF2E28426F708DE0018C1B3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2E28226F708DE0018C1B3 /* TableViewCell.swift */; };
+		E8BD8492E6ADAC236B37D35A /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB5D41C2DEAF4842EB53028 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		168850AD66D2CA6E892B2883 /* Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOS/Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig"; sourceTree = "<group>"; };
-		330C0864E7E644946BAA8DFA /* Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOS/Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig"; sourceTree = "<group>"; };
-		476D601495459974F570BC9C /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		490B9D655237FB102D169451 /* Pods_releaseAppFirestoreTutorialforiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_releaseAppFirestoreTutorialforiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EF5DC1D036F2E89401D6161 /* Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOSTests/Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		513EB0D2B63A27A925176292 /* Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOSTests/Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		37BB6E47614CD7FD4C7CDE5E /* Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOSTests/Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A0865EB4EC3CA2635EABCEA /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		44E48D3A03F8E3DD8248E1C3 /* Pods_releaseAppFirestoreTutorialforiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_releaseAppFirestoreTutorialforiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C66EBCAF1BE09814FF4DA4 /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5874A348B2FC8B6D8FDED28 /* Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOSTests/Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		B9017C00EFE5690B01FDF936 /* Pods_releaseAppFirestoreTutorialforiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_releaseAppFirestoreTutorialforiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB5D41C2DEAF4842EB53028 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E9DB1A01BC87CFF8103E22 /* Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOS/Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig"; sourceTree = "<group>"; };
 		CFC185AC26F31223004E2A5D /* releaseAppFirestoreTutorialforiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = releaseAppFirestoreTutorialforiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC185AF26F31223004E2A5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC185B126F31223004E2A5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,9 +66,9 @@
 		CFC185D326F31225004E2A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC185E026F31B49004E2A5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFEE540826F59E0C00A6D7B1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		D278513304DFD5B624C45C32 /* Pods_releaseAppFirestoreTutorialforiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_releaseAppFirestoreTutorialforiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6A6CD7AB1B47E83958359B7 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7C622BA1FE46C5EBAA7448A /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests/Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CFF2E28026F705A50018C1B3 /* ImageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewController.swift; sourceTree = "<group>"; };
+		CFF2E28226F708DE0018C1B3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = releaseAppFirestoreTutorialforiOS/TableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		F16B49481006BEB08558CA4A /* Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig"; path = "Target Support Files/Pods-releaseAppFirestoreTutorialforiOS/Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1861FF821290E182A9C02C95 /* Pods_releaseAppFirestoreTutorialforiOS.framework in Frameworks */,
+				8AB19219280F2AD151C4A273 /* Pods_releaseAppFirestoreTutorialforiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1531910F965EB926CD7858DA /* Pods_releaseAppFirestoreTutorialforiOSTests.framework in Frameworks */,
+				CD4ECD7E0C2CE77738700277 /* Pods_releaseAppFirestoreTutorialforiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,34 +92,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B6A9F90372546FEA5000F42 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework in Frameworks */,
+				E8BD8492E6ADAC236B37D35A /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		514997BCCBE73B8F778E208B /* Frameworks */ = {
+		187678602984FBCEA5BE9E98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				490B9D655237FB102D169451 /* Pods_releaseAppFirestoreTutorialforiOS.framework */,
-				E6A6CD7AB1B47E83958359B7 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework */,
-				D278513304DFD5B624C45C32 /* Pods_releaseAppFirestoreTutorialforiOSTests.framework */,
+				B9017C00EFE5690B01FDF936 /* Pods_releaseAppFirestoreTutorialforiOS.framework */,
+				BEB5D41C2DEAF4842EB53028 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework */,
+				44E48D3A03F8E3DD8248E1C3 /* Pods_releaseAppFirestoreTutorialforiOSTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5C45EA82B4644766ABC3954B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				330C0864E7E644946BAA8DFA /* Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig */,
-				168850AD66D2CA6E892B2883 /* Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig */,
-				F7C622BA1FE46C5EBAA7448A /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig */,
-				476D601495459974F570BC9C /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig */,
-				4EF5DC1D036F2E89401D6161 /* Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig */,
-				513EB0D2B63A27A925176292 /* Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		CFC185A326F31223004E2A5D = {
@@ -126,8 +117,8 @@
 				CFC185C526F31225004E2A5D /* releaseAppFirestoreTutorialforiOSTests */,
 				CFC185D026F31225004E2A5D /* releaseAppFirestoreTutorialforiOSUITests */,
 				CFC185AD26F31223004E2A5D /* Products */,
-				5C45EA82B4644766ABC3954B /* Pods */,
-				514997BCCBE73B8F778E208B /* Frameworks */,
+				D3C936D5DAFD32B96332E656 /* Pods */,
+				187678602984FBCEA5BE9E98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,7 +139,9 @@
 				CFC185AF26F31223004E2A5D /* AppDelegate.swift */,
 				CFC185B126F31223004E2A5D /* SceneDelegate.swift */,
 				CFC185B326F31223004E2A5D /* ViewController.swift */,
+				CFF2E28026F705A50018C1B3 /* ImageTableViewController.swift */,
 				CFC185B526F31223004E2A5D /* Main.storyboard */,
+				CFF2E28226F708DE0018C1B3 /* TableViewCell.swift */,
 				CFC185B826F31225004E2A5D /* Assets.xcassets */,
 				CFC185BA26F31225004E2A5D /* LaunchScreen.storyboard */,
 				CFC185BD26F31225004E2A5D /* Info.plist */,
@@ -188,6 +181,20 @@
 				CFEE540826F59E0C00A6D7B1 /* Task.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D3C936D5DAFD32B96332E656 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F16B49481006BEB08558CA4A /* Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig */,
+				C7E9DB1A01BC87CFF8103E22 /* Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig */,
+				96C66EBCAF1BE09814FF4DA4 /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig */,
+				3A0865EB4EC3CA2635EABCEA /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig */,
+				37BB6E47614CD7FD4C7CDE5E /* Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig */,
+				B5874A348B2FC8B6D8FDED28 /* Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,8 +436,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF2E28126F705A50018C1B3 /* ImageTableViewController.swift in Sources */,
 				CFEE540926F59E0C00A6D7B1 /* Task.swift in Sources */,
 				CFC185B426F31223004E2A5D /* ViewController.swift in Sources */,
+				CFF2E28426F708DE0018C1B3 /* TableViewCell.swift in Sources */,
 				CFC185B026F31223004E2A5D /* AppDelegate.swift in Sources */,
 				CFC185B226F31223004E2A5D /* SceneDelegate.swift in Sources */,
 			);
@@ -605,7 +614,7 @@
 		};
 		CFC185D726F31225004E2A5D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 330C0864E7E644946BAA8DFA /* Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig */;
+			baseConfigurationReference = F16B49481006BEB08558CA4A /* Pods-releaseAppFirestoreTutorialforiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -625,7 +634,7 @@
 		};
 		CFC185D826F31225004E2A5D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 168850AD66D2CA6E892B2883 /* Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig */;
+			baseConfigurationReference = C7E9DB1A01BC87CFF8103E22 /* Pods-releaseAppFirestoreTutorialforiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -645,7 +654,7 @@
 		};
 		CFC185DA26F31225004E2A5D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EF5DC1D036F2E89401D6161 /* Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig */;
+			baseConfigurationReference = 37BB6E47614CD7FD4C7CDE5E /* Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -668,7 +677,7 @@
 		};
 		CFC185DB26F31225004E2A5D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 513EB0D2B63A27A925176292 /* Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig */;
+			baseConfigurationReference = B5874A348B2FC8B6D8FDED28 /* Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -691,7 +700,7 @@
 		};
 		CFC185DD26F31225004E2A5D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7C622BA1FE46C5EBAA7448A /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig */;
+			baseConfigurationReference = 96C66EBCAF1BE09814FF4DA4 /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -712,7 +721,7 @@
 		};
 		CFC185DE26F31225004E2A5D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 476D601495459974F570BC9C /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig */;
+			baseConfigurationReference = 3A0865EB4EC3CA2635EABCEA /* Pods-releaseAppFirestoreTutorialforiOS-releaseAppFirestoreTutorialforiOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

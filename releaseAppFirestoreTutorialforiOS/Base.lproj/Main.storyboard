@@ -69,6 +69,14 @@
                                     <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hfg-f1-Xwy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASU-Um-hoj">
+                                <rect key="frame" x="184" y="726" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="y3n-Pu-Yac" kind="show" id="t8J-Hn-9lh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -100,6 +108,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9M2-OD-ZWe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="64.955357142857139"/>
+        </scene>
+        <!--TODO-->
+        <scene sceneID="Gvw-ek-mCa">
+            <objects>
+                <viewController id="y3n-Pu-Yac" customClass="ImageViewController" customModule="releaseAppFirestoreTutorialforiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BEh-Qh-fOm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YOI-kB-kWw">
+                                <rect key="frame" x="1" y="88" width="414" height="481"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="139" id="Kfv-Z2-enO" customClass="TableViewCell" customModule="releaseAppFirestoreTutorialforiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="139"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kfv-Z2-enO" id="t2a-M4-2cR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.64560009979999999" green="0.86087566609999999" blue="0.65317411430000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWX-oV-5DC">
+                                <rect key="frame" x="38" y="634" width="46" height="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createButton:" destination="y3n-Pu-Yac" eventType="touchUpInside" id="kpi-KT-TBH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atK-hN-JB6">
+                                <rect key="frame" x="126" y="634" width="35" height="30"/>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="readButton:" destination="y3n-Pu-Yac" eventType="touchUpInside" id="ba1-op-KLC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsW-PC-gQl">
+                                <rect key="frame" x="209" y="634" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="y3n-Pu-Yac" eventType="touchUpInside" id="gk4-zN-7gO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSe-Ne-8E8">
+                                <rect key="frame" x="303" y="634" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="y3n-Pu-Yac" eventType="touchUpInside" id="JJi-WS-wA2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucI-bo-Imr">
+                                <rect key="frame" x="184" y="726" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84E-AK-BOu">
+                                <rect key="frame" x="119" y="592" width="177" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yfd-Xl-ynN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="atK-hN-JB6" firstAttribute="top" secondItem="84E-AK-BOu" secondAttribute="bottom" constant="8" id="4AB-1t-k1B"/>
+                            <constraint firstItem="ucI-bo-Imr" firstAttribute="top" secondItem="zsW-PC-gQl" secondAttribute="bottom" constant="62" id="4e6-gB-Mn6"/>
+                            <constraint firstItem="YOI-kB-kWw" firstAttribute="top" secondItem="Yfd-Xl-ynN" secondAttribute="top" id="5GM-Yb-Fym"/>
+                            <constraint firstItem="YOI-kB-kWw" firstAttribute="leading" secondItem="Yfd-Xl-ynN" secondAttribute="leading" constant="1" id="FSz-0A-jrK"/>
+                            <constraint firstItem="Yfd-Xl-ynN" firstAttribute="bottom" secondItem="ucI-bo-Imr" secondAttribute="bottom" constant="106" id="Fe6-Mi-L0k"/>
+                            <constraint firstItem="YOI-kB-kWw" firstAttribute="centerX" secondItem="84E-AK-BOu" secondAttribute="centerX" id="MWQ-sa-C4s"/>
+                            <constraint firstItem="atK-hN-JB6" firstAttribute="baseline" secondItem="zsW-PC-gQl" secondAttribute="baseline" id="TL2-Gq-Wb9"/>
+                            <constraint firstItem="84E-AK-BOu" firstAttribute="top" secondItem="YOI-kB-kWw" secondAttribute="bottom" constant="23" id="UJy-4U-Dei"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YOI-kB-kWw" secondAttribute="trailing" constant="-21" id="XDh-SM-ay8"/>
+                            <constraint firstItem="zsW-PC-gQl" firstAttribute="leading" secondItem="atK-hN-JB6" secondAttribute="trailing" constant="48" id="ZI8-8w-2gd"/>
+                            <constraint firstItem="yWX-oV-5DC" firstAttribute="baseline" secondItem="atK-hN-JB6" secondAttribute="baseline" id="aXK-X8-TUO"/>
+                            <constraint firstItem="84E-AK-BOu" firstAttribute="centerX" secondItem="ucI-bo-Imr" secondAttribute="centerX" id="bQA-ry-nFq"/>
+                            <constraint firstItem="yWX-oV-5DC" firstAttribute="leading" secondItem="Yfd-Xl-ynN" secondAttribute="leading" constant="38" id="dyA-cR-QJH"/>
+                            <constraint firstItem="NSe-Ne-8E8" firstAttribute="leading" secondItem="zsW-PC-gQl" secondAttribute="trailing" constant="43" id="lfJ-FC-z7Y"/>
+                            <constraint firstItem="ucI-bo-Imr" firstAttribute="leading" secondItem="Yfd-Xl-ynN" secondAttribute="leading" constant="184" id="qEt-r9-HLA"/>
+                            <constraint firstItem="84E-AK-BOu" firstAttribute="leading" secondItem="Yfd-Xl-ynN" secondAttribute="leading" constant="119" id="sgx-Pq-Lsf"/>
+                            <constraint firstItem="atK-hN-JB6" firstAttribute="leading" secondItem="yWX-oV-5DC" secondAttribute="trailing" constant="42" id="tbA-WD-gvd"/>
+                            <constraint firstItem="zsW-PC-gQl" firstAttribute="baseline" secondItem="NSe-Ne-8E8" secondAttribute="baseline" id="xY1-pq-JYQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TODO" id="FJD-dJ-Znz"/>
+                    <connections>
+                        <outlet property="imagenameTextField" destination="84E-AK-BOu" id="nAB-kc-qWO"/>
+                        <outlet property="tableView" destination="YOI-kB-kWw" id="2rO-Rf-B3A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yD8-Oj-XOa" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857.9710144927537" y="64.955357142857139"/>
         </scene>
     </scenes>
     <resources>
