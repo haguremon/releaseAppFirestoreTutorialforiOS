@@ -29,6 +29,7 @@ class TableViewCell: UITableViewCell {
     private func setViewSize(){
 
         label.textAlignment = .center
+        label.center.x = image.bounds.maxX + 40
         label.clipsToBounds = true
         label.frame.size = self.bounds.size
         image.frame.size.height = self.bounds.height - 10
