@@ -8,13 +8,14 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import OrderedCollections
 class ImageViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var imagenameTextField: UITextField!
     private let storage = Storage.storage()
-    private var imagenames: [String] = []
+    private var imagenames: OrderedSet<String> = []
     private var imagedates: [Data] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,17 +60,30 @@ class ImageViewController: UIViewController {
     
     
     func createImageDataAll() {
-        storageReferenceCreate().child("images").getData(maxSize: 1 * 1024 * 1024) { data, error in
-            guard let data = data,
-                  error == nil else {
+        storageReferenceCreate().listAll { result, error in
+            guard  error == nil else {
                 print("error", error)
                 return
+                
             }
-            self.imagedates.append(data)
+            result.items.forEach {self.imagenames.append($0.name)}
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+        
+//        storageReferenceCreate().child("images").getData(maxSize: 1 * 1024 * 1024) { data, error in
+//            guard let data = data,
+//                  error == nil else {
+//                print("error", error)
+//                return
+//            }
+//            self.imagedates.append(data)
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
+//
         
     }
     
@@ -80,14 +94,14 @@ class ImageViewController: UIViewController {
     //値の保存
     func uploadImageData(imagename: String) {
         
-        let imageRef = storageReferenceCreate().child("images")
+        let imageRef = storageReferenceCreate().child(imagename)
         guard let imageData = UIImage(named: imagename)?.jpegData(compressionQuality: 1.0) else {
             print("その画像は保存できません")
             return
         }
         //imageRef.putData(imageData)
         let metadata = StorageMetadata()
-        metadata.contentType = imagename
+        metadata.contentType = "image/jpg"
         
         
         
@@ -97,6 +111,16 @@ class ImageViewController: UIViewController {
                 return
             } else {
                 print("upload successful!")
+                imageRef.downloadURL { url, error in
+                    
+                    if (error != nil) {
+                        print("upload error!")
+                        return
+                    }
+                    guard let downloadURL = url?.absoluteString else { return }
+                    print(downloadURL)
+                     
+                }
                 self.createImageDataAll()
                 
             }
@@ -148,10 +172,13 @@ extension ImageViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+//        let imagedate = imagedates[indexPath.row]
+//        cell.label.text = imagedate.description
         let imagename = imagenames[indexPath.row]
-        cell.label.text = imagename
         cell.layer.cornerRadius = 20
         cell.layer.masksToBounds = true
+//        cell.image.image = UIImage(data: imagedate)
+       
         cell.image.image = UIImage(named: imagename)
         return cell
     }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		CFEE540926F59E0C00A6D7B1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE540826F59E0C00A6D7B1 /* Task.swift */; };
 		CFF2E28126F705A50018C1B3 /* ImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2E28026F705A50018C1B3 /* ImageTableViewController.swift */; };
 		CFF2E28426F708DE0018C1B3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2E28226F708DE0018C1B3 /* TableViewCell.swift */; };
+		CFFA250326F9931D00D176E9 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = CFFA250226F9931D00D176E9 /* OrderedCollections */; };
 		E8BD8492E6ADAC236B37D35A /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB5D41C2DEAF4842EB53028 /* Pods_releaseAppFirestoreTutorialforiOS_releaseAppFirestoreTutorialforiOSUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFA250326F9931D00D176E9 /* OrderedCollections in Frameworks */,
 				8AB19219280F2AD151C4A273 /* Pods_releaseAppFirestoreTutorialforiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,7 +195,6 @@
 				37BB6E47614CD7FD4C7CDE5E /* Pods-releaseAppFirestoreTutorialforiOSTests.debug.xcconfig */,
 				B5874A348B2FC8B6D8FDED28 /* Pods-releaseAppFirestoreTutorialforiOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -215,6 +216,9 @@
 			dependencies = (
 			);
 			name = releaseAppFirestoreTutorialforiOS;
+			packageProductDependencies = (
+				CFFA250226F9931D00D176E9 /* OrderedCollections */,
+			);
 			productName = releaseAppFirestoreTutorialforiOS;
 			productReference = CFC185AC26F31223004E2A5D /* releaseAppFirestoreTutorialforiOS.app */;
 			productType = "com.apple.product-type.application";
@@ -289,6 +293,9 @@
 				Base,
 			);
 			mainGroup = CFC185A326F31223004E2A5D;
+			packageReferences = (
+				CFFA250126F9931D00D176E9 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = CFC185AD26F31223004E2A5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -780,6 +787,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CFFA250126F9931D00D176E9 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CFFA250226F9931D00D176E9 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFFA250126F9931D00D176E9 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFC185A426F31223004E2A5D /* Project object */;
 }
