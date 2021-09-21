@@ -15,6 +15,8 @@ class ImageViewController: UIViewController {
     
     @IBOutlet weak var imagenameTextField: UITextField!
     private let storage = Storage.storage()
+    
+    
     private var imagenames: OrderedSet<String> = []
     private var imagedates: [Data] = []
     override func viewDidLoad() {
@@ -22,21 +24,26 @@ class ImageViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         createImageDataAll()
-        //uploadImageData(imagename: "boy_11")
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = false
     }
     //リリースアプリではここにカメラでのデータを取得してアップするようにする
+    //作成
+    
     @IBAction func createButton(_ sender: Any) {
         guard let imagename = imagenameTextField.text else { return }
         uploadImageData(imagename: imagename)
 
     }
     
+    //読み込み
     @IBAction func readButton(_ sender: Any) {
         
         createImageDataAll()
         
     }
     
+    //アップデート
     @IBAction func updateButton(_ sender: Any) {
         guard let index = tableView.indexPathForSelectedRow,
               let newImage = imagenameTextField.text  else { return }
@@ -44,10 +51,11 @@ class ImageViewController: UIViewController {
         
     }
     
+    //削除
     @IBAction func deleteButton(_ sender: Any) {
-        
-        
-        
+        guard let index = tableView.indexPathForSelectedRow else { return }
+        let deleteImage = imagenames[index.row]
+        deleteImageData(imagename: deleteImage)
     }
     //MRAK: -FireBaseCRAD
     //全値の取得
@@ -60,30 +68,17 @@ class ImageViewController: UIViewController {
     
     
     func createImageDataAll() {
-        storageReferenceCreate().listAll { result, error in
-            guard  error == nil else {
-                print("error", error)
+        storageReferenceCreate().listAll { [weak self] result, error in
+            if let error = error  {
+                 print(error.localizedDescription)
                 return
-                
             }
-            result.items.forEach {self.imagenames.append($0.name)}
+            result.items.forEach {self?.imagenames.append($0.name)}
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             }
         }
-        
-//        storageReferenceCreate().child("images").getData(maxSize: 1 * 1024 * 1024) { data, error in
-//            guard let data = data,
-//                  error == nil else {
-//                print("error", error)
-//                return
-//            }
-//            self.imagedates.append(data)
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        }
-//
+
         
     }
     
@@ -140,9 +135,25 @@ class ImageViewController: UIViewController {
     }
     
     //削除する機能
-    func deleteImageData(task: Task) {
+    func deleteImageData(imagename: String) {
+        // Create a reference to the file to delete
+        let desertRef = storageReferenceCreate().child(imagename)
+
+        // Delete the file
+        desertRef.delete { [ weak self ] error in
+          if let error = error {
+            print("Uh-oh, an error occurred!", error.localizedDescription)
+          } else {
+             print("File deleted successfully")
+            self?.imagenames.remove(imagename)
+            self?.createImageDataAll()
+          }
+    }
+            
         
-        
+}
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        tableView.endEditing(true)
     }
     
     
